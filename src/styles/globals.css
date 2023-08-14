@@ -15,8 +15,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
 body {
+  image-rendering: optimizeQuality;
+  font-family: "Euclid Square";
+
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +26,54 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.font-audrey {
+  font-family: "Audrey";
+}
+
+@font-face {
+  font-family: "Euclid Square";
+  src: local("Euclid Square Regular"), local("Euclid-Square-Regular"),
+    url("/fonts/EuclidSquare-Regular.woff2") format("woff2"),
+    url("/fonts/EuclidSquare-Regular.woff") format("woff"),
+    url("/fonts/EuclidSquare-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Audrey";
+  src: local("Audrey"), url("/fonts/Audrey/Audrey-Normal.woff2") format("woff2"),
+    url("/fonts/Audrey/Audrey-Normal.woff") format("woff"),
+    url("/fonts/Audrey/Audrey-Normal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .control-arrow,
+.control-prev,
+.control-disabled {
+  display: none;
+} */
+/* .control-arrow,
+.control-prev,
+.control-disabled {
+  display: none;
+} */
+
+.carousel .control-next.control-arrow:before,
+.carousel .control-prev.control-arrow:before {
+  border-left: none;
+  border-right: none;
+}
+
+.carousel img {
+  width: 70px;
+}
+
+.carousel .slider-wrapper,
+.carousel.carousel-slider {
+  overflow: visible;
+  /* overflow-x: hidden; */
 }
